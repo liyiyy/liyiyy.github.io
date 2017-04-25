@@ -91,7 +91,7 @@
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小小易的个人博客">
-<meta property="og:url" content="http://yoursite.com/2017/04/25/github+hexo搭建个人静态博客（一）/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/github+hexo搭建个人静态博客（一 搭建）/index.html">
 <meta property="og:site_name" content="小小易的个人博客">
 <meta property="og:description" content="1、先看成果—-小小易的个人博客 2、工具+版本    npm   3.10.8    git Shell 3、开始    1),先从简单的开始；    先去github里创建一个repository;如图;        创建后的页面     1$ npm install hexo-cli -g       //打开git命令行，执行第一行命令安装Hexo，注意；我所实践中发现；npm命令可以在">
 <meta property="og:image" content="d:/blog/source/hexoImg/2017-04-25_001949.png">
@@ -102,7 +102,7 @@
 <meta property="og:image" content="d:/blog/source/hexoImg/2017-04-25_000711.png">
 <meta property="og:image" content="d:/blog/source/hexoImg/2017-04-25_000956.png">
 <meta property="og:image" content="d:/blog/source/hexoImg/2017-04-25_001421.png">
-<meta property="og:updated_time" content="2017-04-25T13:05:15.740Z">
+<meta property="og:updated_time" content="2017-04-25T13:22:30.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小小易的个人博客">
 <meta name="twitter:description" content="1、先看成果—-小小易的个人博客 2、工具+版本    npm   3.10.8    git Shell 3、开始    1),先从简单的开始；    先去github里创建一个repository;如图;        创建后的页面     1$ npm install hexo-cli -g       //打开git命令行，执行第一行命令安装Hexo，注意；我所实践中发现；npm命令可以在">
@@ -134,7 +134,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/25/github+hexo搭建个人静态博客（一）/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/25/github+hexo搭建个人静态博客（一 搭建）/"/>
 
 
 
@@ -259,7 +259,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/github+hexo搭建个人静态博客（一）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/github+hexo搭建个人静态博客（一 搭建）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiYi">
@@ -295,7 +295,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T20:57:16+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T21:22:59+08:00">
                 2017-04-25
               </time>
             
@@ -354,6 +354,10 @@ hexo d
 <p>4） 绑定自己的域名<br>a).先去买个域名，我的是在阿里云上买的；然后解析域名，添加解析记录，如：<br><img src="" alt="image"></p>
 <p>b).在source文件夹下创建CHAME文件(为什么要在source文件夹下写，是为了以后上传文件时避免覆盖，不要后缀，可以用cmd黑窗口命令行创建，也可以用编辑器创建；里面只需要写域名就好了例如我的就是liyiyy.com，不需要写WWW;</p>
 <p>好了过段时间，就可以打开你的域名访问了<br>打开我的—liyiyy.com<br>成功！</p>
+<p>=========================途中所遇到的问题=========================</p>
+<p>1,本地测试成功，上传到github后不能打开？<br>    这里卡壳了好多天，上传上去后一直会给我发邮件说创建页面失败，后面按照简洁的做法，没有先安装主题，直接初始化后就上传了，然后也没出问题，后来仔细阅读邮件后发现可能是主题安装的版本与github上的东西不兼容。</p>
+<p>2，绑定域名的时候绑定成功了，但就是不显示内容，整个页面只有EOF？<br>    之前一直是在手机上解析域名的，也没有报什么原因，在电脑上解析的时候报出出错原因是域名冲突了，刚注册的域名会有很多的解析的东西，后来没办法，简单粗暴的把其他的直接删除了，没出问题了；不知道这有什么不妥；</p>
+<p>3，发现局限性不知道怎么破？<br>    在本地添加的图片在部署后不会显示出来；用github图片的链接也没用；</p>
 
       
     </div>
