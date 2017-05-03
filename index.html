@@ -357,7 +357,7 @@ hexo clean
 hexo g
 hexo d
 </code></pre><p>上传成功后就可以在浏览器中输入你的网址了，例如我的；liyiyy.github.io 就可以看见已经成功了</p>
-<p>4） 绑定自己的域名<br>a).先去买个域名，我的是在阿里云上买的；然后解析域名，添加解析记录，如：<br><img src="/2017/05/03/github-hexo搭建个人静态博客（一-搭建）/" alt="image"></p>
+<p>4） 绑定自己的域名<br>a).先去买个域名，我的是在阿里云上买的；然后解析域名，添加解析记录，如：<br><img src="/2017/05/03/github-hexo搭建个人静态博客（一-搭建）/QQ截图20170425092548.png" alt="image"></p>
 <p>b).在source文件夹下创建CHAME文件(为什么要在source文件夹下写，是为了以后上传文件时避免覆盖，不要后缀，可以用cmd黑窗口命令行创建，也可以用编辑器创建；里面只需要写域名就好了例如我的就是liyiyy.com，不需要写WWW;</p>
 <p>好了过段时间，就可以打开你的域名访问了<br>打开我的—liyiyy.com<br>成功！</p>
 <p>=========================途中所遇到的问题=========================</p>
@@ -430,7 +430,7 @@ hexo d
               
                 
                 <a class="post-title-link" href="/2017/05/03/5-3hexo补充/" itemprop="url">
-                  5.3hexo补充
+                  5.3——hexo补充
                 </a>
               
             
@@ -484,7 +484,7 @@ hexo d
       
         
           
-            <p>解决上次遗留下的图片问题</p>
+            <p>解决上次遗留下的图片问题,重新创立了上个文件上个后的时间变成了这个文件之后的时间，所以正确的说是下一篇文章，不是懒，是不想改；哈哈哈</p>
 <p>1、首先将目录下_config.yml文件中的 post_asset_folder: true  像这样修改为true<br>2、打开git；执行    npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">https://github.com/CodeFalling/hexo-asset-image</a> –save<br>3、在使用命令   hexo new “hexo补充”  新建一个md文件，发现会多出个文件夹，可以将需要引入的资源（图片）放在这个文件夹中；<br>4、引用   <img src="/2017/05/03/5-3hexo补充/下载.jpg" alt="image"></p>
 
           
