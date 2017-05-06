@@ -3,14 +3,13 @@
 
 
     
-    
   <url>
-    <loc>http://liyiyy.com/2017/05/03/5-3hexo%E8%A1%A5%E5%85%85/</loc>
-    <lastmod>2017-05-03T15:24:40.156Z</lastmod>
+    <loc>http://liyiyy.com/2017/05/06/vue%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/</loc>
+    <lastmod>2017-05-06T12:13:05.188Z</lastmod>
     <data>
         <display>
-        <title>5.3——hexo补充</title>
-        <pubTime>2017-05-03T14:29:44.000Z</pubTime>
+        <title>vue搭建项目案例分析</title>
+        <pubTime>2017-05-06T09:28:40.000Z</pubTime>
         
          
            
@@ -21,11 +20,27 @@
     
   <url>
     <loc>http://liyiyy.com/2017/05/03/github-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%80-%E6%90%AD%E5%BB%BA%EF%BC%89/</loc>
-    <lastmod>2017-05-03T15:03:02.118Z</lastmod>
+    <lastmod>2017-05-06T09:35:48.496Z</lastmod>
     <data>
         <display>
         <title>github+hexo搭建个人静态博客（一 搭建）</title>
         <pubTime>2017-05-03T14:57:04.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://liyiyy.com/2017/05/03/5-3hexo%E8%A1%A5%E5%85%85/</loc>
+    <lastmod>2017-05-03T15:24:40.156Z</lastmod>
+    <data>
+        <display>
+        <title>5.3——hexo补充</title>
+        <pubTime>2017-05-03T14:29:44.000Z</pubTime>
         
          
            
