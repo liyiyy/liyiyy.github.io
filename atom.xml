@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liyiyy.com/"/>
-  <updated>2017-07-19T15:47:55.060Z</updated>
+  <updated>2017-07-19T16:00:57.796Z</updated>
   <id>http://liyiyy.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>整合2</title>
+    <link href="http://liyiyy.com/2017/07/20/%E6%95%B4%E5%90%882/"/>
+    <id>http://liyiyy.com/2017/07/20/整合2/</id>
+    <published>2017-07-20T12:07:08.000Z</published>
+    <updated>2017-07-19T16:00:57.796Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li>[ ] hexo博客框架完善探究</li>
+<li>[ ] hexo在线编辑的实现        <a href="https://www.zhihu.com/question/27384681" target="_blank" rel="external">https://www.zhihu.com/question/27384681</a></li>
+<li>[ ] github图片上传保存，方便md图片插入，问题来了，GitHub空间大小有限制，有别的更好的替代方案吗？</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;[ ] hexo博客框架完善探究&lt;/li&gt;
+&lt;li&gt;[ ] hexo在线编辑的实现        &lt;a href=&quot;https://www.zhihu.com/question/27384681&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;h
+    
+    </summary>
+    
+    
+      <category term="计划" scheme="http://liyiyy.com/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>整合</title>
