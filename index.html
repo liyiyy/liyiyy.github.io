@@ -66,6 +66,60 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="post-nuxt相关问题（1）" class="post-nuxt相关问题（1） post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/08/18/nuxt相关问题（1）/">nuxt相关问题</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/08/18/nuxt相关问题（1）/" data-id="cj6hylb1e000b5cdbqm0wi5y8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h4 id="1、nuxt中使用element-ui-相关配置"><a href="#1、nuxt中使用element-ui-相关配置" class="headerlink" title="1、nuxt中使用element-ui 相关配置"></a>1、nuxt中使用element-ui 相关配置</h4><p>1、首先在nuxt.config.js中配置如下：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="string">vender:</span>[</div><div class="line">  <span class="string">'element-ui'</span></div><div class="line">],</div><div class="line"><span class="string">babel:</span>&#123;</div><div class="line">  <span class="string">"plugins"</span>: [[<span class="string">"component"</span>, [</div><div class="line">    &#123;</div><div class="line">      <span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,</div><div class="line">      <span class="string">"styleLibraryName"</span>: <span class="string">"theme-default"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">'transform-async-to-generator'</span>,</div><div class="line">    <span class="string">'transform-runtime'</span></div><div class="line">  ]]],</div><div class="line"><span class="symbol">  comments:</span> <span class="literal">true</span></div><div class="line">&#125;,</div><div class="line"><span class="string">plugins:</span> [</div><div class="line">&#123; <span class="string">src:</span> <span class="string">'~plugins/element-ui'</span>, <span class="string">ssr:</span> <span class="literal">true</span> &#125;</div><div class="line">],</div><div class="line"><span class="string">css:</span> [</div><div class="line"><span class="comment">// 有些说全部引用的时候需要用到,在我使用过程中不管全局引用还是部分引用都是要配置，否则样式不生效，可能哪里还没配置好，但是写了一定会有效；</span></div><div class="line"><span class="comment">// 'element-ui/lib/theme-default/index.css'</span></div><div class="line">]</div></pre></td></tr></table></figure></p>
+<p>2、在plagins目录下新建element-ui.js,引入vue<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import Vue from <span class="string">'vue'</span></div><div class="line"></div><div class="line"><span class="regexp">//</span> 全部引用，此时需要在nuxt.config.js中设置css</div><div class="line"><span class="regexp">//</span> <span class="keyword">if</span> (process.BROWSER_BUILD) &#123;</div><div class="line"><span class="regexp">//</span>   Vue.use(require(<span class="string">'element-ui'</span>))</div><div class="line"><span class="regexp">//</span> &#125;</div></pre></td></tr></table></figure></p>
+<p>3、在组件中使用</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="xml">//备注：借鉴别人的写法</span></div><div class="line">import <span class="template-variable">&#123; Button &#125;</span><span class="xml"> from 'element-ui'</span></div><div class="line">Vue.component(Button.name, Button)      </div><div class="line"></div><div class="line">//自己的用法</div><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'box'</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">el-pagination</span></span></div><div class="line">    <span class="attr">layout</span>=<span class="string">"prev, pager, next"</span></div><div class="line">    <span class="attr">:total</span>=<span class="string">"1000"</span>&gt;</div><div class="line">  <span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">    <span class="meta"><span class="meta-keyword">import</span> </span><span class="template-variable">&#123; Pagination &#125;</span><span class="xml"><span class="javascript"> <span class="keyword">from</span> <span class="string">'element-ui'</span></span></span></div><div class="line">    <span class="keyword">export</span> <span class="keyword">default</span><span class="template-variable">&#123;</span></div><div class="line">        components:&#123;</div><div class="line">            el-pagination:Pagination</div><div class="line">        &#125;<span class="xml"><span class="undefined"></span></span></div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="2、在组件中使用了element-ui框架-swiper插件，修改其样式无效问题"><a href="#2、在组件中使用了element-ui框架-swiper插件，修改其样式无效问题" class="headerlink" title="2、在组件中使用了element-ui框架,swiper插件，修改其样式无效问题"></a>2、在组件中使用了element-ui框架,swiper插件，修改其样式无效问题</h4><p>直接写一对style标签，不加scoped属性，然后用一个组件最外层的class包裹住，就不会改到所有的组件的样式了。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//注意：修改样式时是修改生成的标签，而不是所写的标签。</div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">'scss'</span>&gt;</span><span class="undefined"></span></div><div class="line">    .box&#123;</div><div class="line">        li &#123;</div><div class="line">            color:red;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h4 id="3、在nuxt使用swiper实现轮播"><a href="#3、在nuxt使用swiper实现轮播" class="headerlink" title="3、在nuxt使用swiper实现轮播"></a>3、在nuxt使用swiper实现轮播</h4><p>1、下载使用<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install </span>vue-awesome-<span class="keyword">swiper </span>--save</div></pre></td></tr></table></figure></p>
+<p>2、在plugins文件夹下新建文件swiper.js<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> VueAwesomeSwiper <span class="keyword">from</span> <span class="string">'vue-awesome-swiper/ssr'</span></div><div class="line"></div><div class="line">Vue.use(VueAwesomeSwiper)</div></pre></td></tr></table></figure></p>
+<p>3、在nuxt.config.js里面配置<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">  <span class="comment">// some nuxt config...</span></div><div class="line"><span class="symbol">  plugins:</span> [</div><div class="line">    &#123; <span class="string">src:</span> <span class="string">'~/plugins/swiper.js'</span>, <span class="string">ssr:</span> <span class="literal">false</span> &#125;,</div><div class="line">  ],</div><div class="line">  <span class="comment">// some nuxt config...</span></div><div class="line"><span class="symbol">  css:</span> [</div><div class="line">    <span class="string">'swiper/dist/css/swiper.css'</span></div><div class="line">  ],</div><div class="line">  <span class="comment">// some nuxt config...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>4、在组件内使用<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-swiper:mySwiper</span>=<span class="string">"swiperOption"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-wrapper"</span>&gt;</span></div><div class="line">            <span class="comment">&lt;!--&lt;div class="swiper-slide" v-for="banner in banners"&gt;</span></div><div class="line">                &lt;img :src="banner"&gt;</div><div class="line">            &lt;/div&gt;--&gt;</div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"~assets/images/index/jpg201682385425.jpg"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"~assets/images/index/jpg201692291653.jpg"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-slide"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"~assets/images/index/jpg201732492252.jpg"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-pagination swiper-pagination-bullets bullets bullets-active point-style"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-button-prev"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"swiper-button-next"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">        data() &#123;</div><div class="line">            <span class="keyword">return</span> &#123;</div><div class="line">                <span class="attr">banners</span>: [],</div><div class="line">                <span class="attr">swiperOption</span>: &#123;</div><div class="line">                    <span class="attr">autoplay</span>: <span class="number">3000</span>,</div><div class="line">                    <span class="attr">loop</span>: <span class="literal">true</span>,</div><div class="line">                    <span class="attr">pagination</span>: <span class="string">'.swiper-pagination'</span>,</div><div class="line">                    <span class="attr">paginationClickable</span>: <span class="literal">true</span>,</div><div class="line">                    <span class="attr">nextButton</span>: <span class="string">'.swiper-button-next'</span>,</div><div class="line">                    <span class="attr">prevButton</span>: <span class="string">'.swiper-button-prev'</span>,</div><div class="line">                    <span class="attr">effect</span>: <span class="string">'fade'</span>,</div><div class="line">                    <span class="attr">paginationModifierClass</span>:<span class="string">'banner-'</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        mounted() &#123;</div><div class="line">            <span class="keyword">this</span>.getBannerList()</div><div class="line">        &#125;,</div><div class="line">         <span class="attr">methods</span>: &#123;</div><div class="line">            getBannerList () &#123;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-class">.swiper-button-prev</span> &#123;</div><div class="line">        <span class="attribute">position</span>: absolute;</div><div class="line">        <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">        <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">        <span class="attribute">margin-top</span>: -<span class="number">25px</span>;</div><div class="line">        <span class="attribute">width</span>: <span class="number">45px</span>;</div><div class="line">        <span class="attribute">height</span>: <span class="number">60px</span>;</div><div class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(~assets/images/common/banner_e.png) <span class="number">0</span> <span class="number">0</span> no-repeat;</div><div class="line">        <span class="attribute">filter</span>: <span class="built_in">alpha</span>(opacity=50);</div><div class="line">        <span class="attribute">opacity</span>: <span class="number">0.5</span>;</div><div class="line">        <span class="attribute">display</span>: block;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="selector-class">.swiper-button-next</span> &#123;</div><div class="line">        <span class="attribute">left</span>: auto;</div><div class="line">        <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">        <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">        <span class="attribute">position</span>: absolute;</div><div class="line">        <span class="attribute">margin-top</span>: -<span class="number">25px</span>;</div><div class="line">        <span class="attribute">width</span>: <span class="number">45px</span>;</div><div class="line">        <span class="attribute">height</span>: <span class="number">60px</span>;</div><div class="line">        <span class="attribute">background</span>: <span class="built_in">url</span>(~assets/images/common/banner_f.png) <span class="number">0</span> <span class="number">0</span> no-repeat;</div><div class="line">        <span class="attribute">filter</span>: <span class="built_in">alpha</span>(opacity=50);</div><div class="line">        <span class="attribute">opacity</span>: <span class="number">0.5</span>;</div><div class="line">        <span class="attribute">display</span>: block;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"scss"</span>&gt;</span><span class="undefined"></span></div><div class="line">	.point-style&#123;</div><div class="line">	    .swiper-pagination-bullet&#123;</div><div class="line">	        width: 9px;</div><div class="line">            height: 9px;</div><div class="line">	        border-radius: 50%;</div><div class="line">	        background: rgba(0,0,0,0.3);</div><div class="line">	    &#125;</div><div class="line">	    .swiper-pagination-bullet-active&#123;</div><div class="line">	        background: #FD7045;</div><div class="line">	        width: 9px;</div><div class="line">	        height: 9px;</div><div class="line">	        border-radius: 50%;</div><div class="line">	    &#125;</div><div class="line">	&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/08/18/nuxt相关问题（1）/">
+    <time datetime="2017-08-18T13:24:34.000Z" class="entry-date">
+        2017-08-18
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-整合2" class="post-整合2 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -81,7 +135,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/07/20/整合2/" data-id="cj6axtjwc0006sodbmcne1eys" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/07/20/整合2/" data-id="cj6hylb0y00035cdb2ceueq5t" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -131,7 +185,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/07/19/整合/" data-id="cj6axtjws0008sodbsexositw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/07/19/整合/" data-id="cj6hylb0y00045cdb1h3l958r" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -182,7 +236,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/06/20/vue 补充/" data-id="cj6axtjvx0003sodbguijyl9a" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/06/20/vue 补充/" data-id="cj6hylb1e00075cdb2yq6nqvb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -248,7 +302,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/05/06/vue搭建项目案例分析/" data-id="cj6axtjvx0004sodbu5i9w3u4" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/05/06/vue搭建项目案例分析/" data-id="cj6hylb0y00015cdb6pb5g75j" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -302,7 +356,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/05/03/5-3hexo补充/" data-id="cj6axtjum0000sodbpb9ycfsr" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/05/03/5-3hexo补充/" data-id="cj6hylb1e00065cdbv2i4geyp" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -347,7 +401,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/05/02/github-hexo搭建个人静态博客（一-搭建）/" data-id="cj6axtjwc0007sodbexlntuci" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/05/02/github-hexo搭建个人静态博客（一-搭建）/" data-id="cj6hylb0300005cdbynjhnlds" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -416,7 +470,7 @@ hexo d
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/04/13/hello-world/" data-id="cj6axtjvx0001sodbvhc6rt42" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/04/13/hello-world/" data-id="cj6hylb1e00085cdb76yjcdj6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -475,6 +529,10 @@ hexo d
       <ul>
         
           <li>
+            <a href="/2017/08/18/nuxt相关问题（1）/">nuxt相关问题</a>
+          </li>
+        
+          <li>
             <a href="/2017/07/20/整合2/">整合2</a>
           </li>
         
@@ -490,10 +548,6 @@ hexo d
             <a href="/2017/05/06/vue搭建项目案例分析/">vue搭建项目案例分析</a>
           </li>
         
-          <li>
-            <a href="/2017/05/03/5-3hexo补充/">5.3——hexo补充</a>
-          </li>
-        
       </ul>
     </div>
   </aside>
@@ -503,7 +557,7 @@ hexo d
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感想加点料/">感想加点料</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计划/">计划</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感想加点料/">感想加点料</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计划/">计划</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </aside>
 
@@ -512,7 +566,7 @@ hexo d
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/感想加点料/" style="font-size: 10px;">感想加点料</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a>
+      <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/感想加点料/" style="font-size: 10px;">感想加点料</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a>
     </div>
   </aside>
 
