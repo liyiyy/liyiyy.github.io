@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="前端、html,js,angular,vue" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>vue搭建项目案例分析 | Miss·易</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="从0到1怎么做的流程，产品-设计-前端-后端-测试-上线等1、在项目立项时，所有相关人员（产品、UI、前端、后端、测试）开产品会议，产品会根据市场调研分析、市场需求、产品定位、盈利模式等给出需求说明书和设计出原型图。讨论具体的功能模块和跳转逻辑，一起讨论交流原型，不足之处进行改进完善。 2、UI会根据开会内容设计出效果图，然后开会开发人员这边还需要根据需求和所掌握的技术讨论采用什么开发框架。UI设">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue搭建项目案例分析">
+<meta property="og:url" content="http://liyiyy.com/2017/05/06/vue搭建项目案例分析/index.html">
+<meta property="og:site_name" content="Miss·易">
+<meta property="og:description" content="从0到1怎么做的流程，产品-设计-前端-后端-测试-上线等1、在项目立项时，所有相关人员（产品、UI、前端、后端、测试）开产品会议，产品会根据市场调研分析、市场需求、产品定位、盈利模式等给出需求说明书和设计出原型图。讨论具体的功能模块和跳转逻辑，一起讨论交流原型，不足之处进行改进完善。 2、UI会根据开会内容设计出效果图，然后开会开发人员这边还需要根据需求和所掌握的技术讨论采用什么开发框架。UI设">
+<meta property="og:image" content="http://liyiyy.com/2017/05/06/vue搭建项目案例分析/2017-05-06_173354.png">
+<meta property="og:image" content="http://liyiyy.com/2017/05/06/vue搭建项目案例分析/2017-05-06_185245.png">
+<meta property="og:updated_time" content="2017-05-06T12:38:06.590Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue搭建项目案例分析">
+<meta name="twitter:description" content="从0到1怎么做的流程，产品-设计-前端-后端-测试-上线等1、在项目立项时，所有相关人员（产品、UI、前端、后端、测试）开产品会议，产品会根据市场调研分析、市场需求、产品定位、盈利模式等给出需求说明书和设计出原型图。讨论具体的功能模块和跳转逻辑，一起讨论交流原型，不足之处进行改进完善。 2、UI会根据开会内容设计出效果图，然后开会开发人员这边还需要根据需求和所掌握的技术讨论采用什么开发框架。UI设">
+<meta name="twitter:image" content="http://liyiyy.com/2017/05/06/vue搭建项目案例分析/2017-05-06_173354.png">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Miss·易" rel="home">Miss·易</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">前端与生活de拼拼凑凑</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-vue搭建项目案例分析" class="post-vue搭建项目案例分析 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      vue搭建项目案例分析
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/05/06/vue搭建项目案例分析/" data-id="cj6hylb0y00015cdb6pb5g75j" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="从0到1怎么做的流程，产品-设计-前端-后端-测试-上线等"><a href="#从0到1怎么做的流程，产品-设计-前端-后端-测试-上线等" class="headerlink" title="从0到1怎么做的流程，产品-设计-前端-后端-测试-上线等"></a>从0到1怎么做的流程，产品-设计-前端-后端-测试-上线等</h3><p>1、在项目立项时，所有相关人员（产品、UI、前端、后端、测试）开产品会议，产品会根据市场调研分析、市场需求、产品定位、盈利模式等给出需求说明书和设计出原型图。讨论具体的功能模块和跳转逻辑，一起讨论交流原型，不足之处进行改进完善。</p>
+<p>2、UI会根据开会内容设计出效果图，然后开会开发人员这边还需要根据需求和所掌握的技术讨论采用什么开发框架。UI设计出效果图给产品，产品还会跟客户交涉，看是否效果图能达到客户预期。达到预期后，就会开始分工合作。<br>项目原型图：<br><img src="/2017/05/06/vue搭建项目案例分析/2017-05-06_173354.png" alt="原型图">；<br>4、各类的方案通过后，就根据任务安排 评估项目所需要的时间。评估出 产品、UI、前端、后端、测试的开发时间，找到最节省时间、效率最高的的开发方案。<br>5，UI将设计好的图给前端，前端开始用模拟的数据写静态的页面，并同后台商量需要的数据格式；让后端写数据并写好接口给前端人员，并给出接口文档说明书；<br>6，接口和静态页面写好后就要前后台联调，跑通后就交付给测试人员去测试，生产环境测试，开发环境测试；然后反馈修改，最后通过项目模拟上线测试就可以上线了。</p>
+<h3 id="用vue搭建项目流程-从0-1——aixianmian-vue-框架搭建"><a href="#用vue搭建项目流程-从0-1——aixianmian-vue-框架搭建" class="headerlink" title="用vue搭建项目流程-从0-1——aixianmian_vue 框架搭建"></a>用vue搭建项目流程-从0-1——aixianmian_vue 框架搭建</h3><h5 id="demo示例："><a href="#demo示例：" class="headerlink" title="demo示例："></a>demo示例：</h5><p>注意：vue分为单页面和多页面应用之分，项目比较小的就用单页面应用，项目大就用多页面应用。只是搭建个小的demo,单页面就搞定了。<br>项目的 vue2.0 + vue-cli + webpack + vue-router2.0</p>
+<p>1.安装Vue2.0<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> vue</div></pre></td></tr></table></figure></p>
+<p>2.安装vue-cli 脚手架工具<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> install --<span class="built_in">global</span> vue-cli</div></pre></td></tr></table></figure></p>
+<p>3.在某个目录下，创建一个基于 webpack 模板的新项目<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vue init webpack my-<span class="keyword">project</span>			//my-<span class="keyword">project</span>是你的项目名</div></pre></td></tr></table></figure></p>
+<p>4.安装依赖<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd my-<span class="keyword">project</span>  <span class="comment">//到项目目录下</span></div><div class="line">npm install  <span class="comment">//安装依赖</span></div></pre></td></tr></table></figure></p>
+<p>6.运行vue项目<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">run</span> dev		<span class="comment">//一个简单的vue项目就好了</span></div></pre></td></tr></table></figure></p>
+<p>7.安装路由<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> vue-router</div></pre></td></tr></table></figure></p>
+<h5 id="基础的安装工作就做好了，下面开始来写配置和代码"><a href="#基础的安装工作就做好了，下面开始来写配置和代码" class="headerlink" title="基础的安装工作就做好了，下面开始来写配置和代码"></a>基础的安装工作就做好了，下面开始来写配置和代码</h5><p>1，项目整体目录目录：<br><img src="/2017/05/06/vue搭建项目案例分析/2017-05-06_185245.png" alt="项目目录">；<br>单页面应用主要写代码的部分在src文件夹下,组建部分在的components的以Vue结尾的文件中；<br>2，路由 部分在router下的index.js中配置 ；vue的引入、输出的语法是参ES6的语法，用import引入，export输出。<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></div><div class="line"><span class="keyword">import</span> LimitFree <span class="keyword">from</span> <span class="string">'@/components/limitFree'</span></div><div class="line"><span class="keyword">import</span> Free <span class="keyword">from</span> <span class="string">'@/components/free'</span></div><div class="line"><span class="keyword">import</span> Zhuanti <span class="keyword">from</span> <span class="string">'@/components/zhuanti'</span></div><div class="line"><span class="keyword">import</span> Hotlist <span class="keyword">from</span> <span class="string">'@/components/hotlist'</span></div><div class="line"><span class="keyword">import</span> Sale <span class="keyword">from</span> <span class="string">'@/components/sale'</span></div><div class="line"></div><div class="line">Vue.use(Router)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</div><div class="line">  routes: [</div><div class="line">    &#123;</div><div class="line">      path: <span class="string">'/LimitFree'</span>,</div><div class="line"><span class="regexp">//</span>    name: <span class="string">'Hello'</span>,</div><div class="line">      component: LimitFree</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      path: <span class="string">'/Free'</span>,</div><div class="line"><span class="regexp">//</span>    name: <span class="string">'Hello'</span>,</div><div class="line">      component: Free</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      path: <span class="string">'/Zhuanti'</span>,</div><div class="line"><span class="regexp">//</span>    name: <span class="string">'Hello'</span>,</div><div class="line">      component: Zhuanti</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      path: <span class="string">'/Hotlist'</span>,</div><div class="line"><span class="regexp">//</span>    name: <span class="string">'Hello'</span>,</div><div class="line">      component: Hotlist</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      path: <span class="string">'/Sale'</span>,</div><div class="line"><span class="regexp">//</span>    name: <span class="string">'Hello'</span>,</div><div class="line">      component: Sale</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      path: <span class="string">'*'</span>,</div><div class="line">      redirect: <span class="string">'/LimitFree'</span></div><div class="line"><span class="regexp">//</span>    name: <span class="string">'Hello'</span>,</div><div class="line">    &#125;    </div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>3，vue在2.0版本中的组件模板需要一个外围标签包裹，否则会报错。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"limitFree"</span>&gt;</span></div><div class="line">  	要用一个div 包裹住；现在   在这块就可以正式开始你的代码了；</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">	写组建的样式</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">	写组建的处理代码</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>4，组件传值完整示例；父级传给子级，子级传给父级，同级之间的传值；<br><figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="meta">&lt;!DOCTYPE html&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"vue2.0/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">aaa</span>&gt;</span><span class="tag">&lt;/<span class="name">aaa</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">hr</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">bbb</span>&gt;</span><span class="tag">&lt;/<span class="name">bbb</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">hr</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">ccc</span>&gt;</span><span class="tag">&lt;/<span class="name">ccc</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">		</div><div class="line">		<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">			<span class="comment">//创建一个空的vue实例，专门用来处理组件于组件之间通信的事件</span></div><div class="line">			<span class="keyword">var</span> myEvent = <span class="keyword">new</span> Vue();</div><div class="line">		</div><div class="line">			<span class="keyword">var</span> aCom = &#123;</div><div class="line">				template: `</div><div class="line">					&lt;div&gt;</div><div class="line">						&lt;h1&gt;这是a组件&lt;/h1&gt;</div><div class="line">						&lt;p&gt;<span class="template-variable">&#123;&#123;msg&#125;&#125;</span><span class="xml"><span class="handlebars"><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span></span></div><div class="line">						<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">'sendMsg()'</span>&gt;</span>将数据给c<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">				`,</div><div class="line">				data()&#123;</div><div class="line">					return &#123;</div><div class="line">						msg: '这是a的数据'</div><div class="line">					&#125;</div><div class="line">				&#125;,</div><div class="line">				methods: &#123;</div><div class="line">					sendMsg()&#123;</div><div class="line">						myEvent.$emit('a-send', this.msg, 123);</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			var bCom = &#123;</div><div class="line">				template: `</div><div class="line">					<span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是b组件<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="template-variable">&#123;&#123;msg&#125;&#125;</span><span class="xml"><span class="handlebars"><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span></span></div><div class="line">						<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">'sendMsg()'</span>&gt;</span>将数据给c<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">				`,</div><div class="line">				data()&#123;</div><div class="line">					return &#123;</div><div class="line">						msg: '这是b的数据'</div><div class="line">					&#125;</div><div class="line">				&#125;,</div><div class="line">				methods: &#123;</div><div class="line">					sendMsg()&#123;</div><div class="line">						//发送数据</div><div class="line">						myEvent.$emit('b-send', this.msg)</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			var cCom = &#123;</div><div class="line">				template: `</div><div class="line">					<span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是c组件<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">p</span>&gt;</span>这是从a组件接收的:<span class="template-variable">&#123;&#123;aMsg&#125;&#125;</span><span class="xml"><span class="handlebars"><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span></span></div><div class="line">						<span class="tag">&lt;<span class="name">p</span>&gt;</span>这是从b组件接收的:<span class="template-variable">&#123;&#123;bMsg&#125;&#125;</span><span class="xml"><span class="actionscript">&lt;/p&gt;</span></span></div><div class="line">					&lt;/div&gt;</div><div class="line">				`,</div><div class="line">				data()&#123;</div><div class="line">					<span class="keyword">return</span> &#123;</div><div class="line">						aMsg: <span class="string">'111'</span>,</div><div class="line">						bMsg: <span class="string">''</span></div><div class="line">					&#125;</div><div class="line">				&#125;,</div><div class="line">				mounted()&#123;</div><div class="line">					</div><div class="line">					<span class="comment">//接收事件</span></div><div class="line">					myEvent.$on(<span class="string">'a-send'</span>, <span class="function"><span class="keyword">function</span><span class="params">(data1, data2)</span></span>&#123;</div><div class="line">						console.log(data1)</div><div class="line">						<span class="keyword">this</span>.aMsg = data1;</div><div class="line">						console.log(<span class="keyword">this</span>.aMsg)</div><div class="line">					&#125;.bind(<span class="keyword">this</span>))</div><div class="line">					</div><div class="line">					myEvent.$on(<span class="string">'b-send'</span>, <span class="function"><span class="keyword">function</span><span class="params">(data)</span></span>&#123;</div><div class="line">						console.log(data)</div><div class="line">						<span class="keyword">this</span>.bMsg = data</div><div class="line">					&#125;.bind(<span class="keyword">this</span>))</div><div class="line">					</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			</div><div class="line">			<span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">				el: <span class="string">'#app'</span>,</div><div class="line">				components: &#123;</div><div class="line">					<span class="string">'aaa'</span>: aCom,</div><div class="line">					<span class="string">'bbb'</span>: bCom,</div><div class="line">					<span class="string">'ccc'</span>: cCom</div><div class="line">				&#125;</div><div class="line">			&#125;)</div><div class="line">			</div><div class="line">			</div><div class="line">			</div><div class="line">			</div><div class="line">			</div><div class="line">		<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">		</div><div class="line">		</div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/05/06/vue搭建项目案例分析/">
+    <time datetime="2017-05-06T09:28:40.000Z" class="entry-date">
+        2017-05-06
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/05/03/5-3hexo补充/" rel="prev"><span class="meta-nav">←</span> 5.3——hexo补充</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/20/vue 补充/" rel="next">vue-补充 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/18/nuxt相关问题（1）/">nuxt相关问题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/20/整合2/">整合2</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/整合/">整合</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/20/vue 补充/">vue-补充</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/06/vue搭建项目案例分析/">vue搭建项目案例分析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感想加点料/">感想加点料</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计划/">计划</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/感想加点料/" style="font-size: 10px;">感想加点料</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 LiYi
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

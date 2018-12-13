@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="前端、html,js,angular,vue" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>vue-补充 | Miss·易</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、关于this1)第一种情况1234567891011121314151617181920212223242526&amp;lt;script&amp;gt;    import Hello from &apos;./components/Hello&apos;    export default &amp;#123;      data () &amp;#123;        return &amp;#123;          list: [&apos;a&apos;">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-补充">
+<meta property="og:url" content="http://liyiyy.com/2017/06/20/vue 补充/index.html">
+<meta property="og:site_name" content="Miss·易">
+<meta property="og:description" content="1、关于this1)第一种情况1234567891011121314151617181920212223242526&amp;lt;script&amp;gt;    import Hello from &apos;./components/Hello&apos;    export default &amp;#123;      data () &amp;#123;        return &amp;#123;          list: [&apos;a&apos;">
+<meta property="og:updated_time" content="2017-07-19T15:57:30.850Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue-补充">
+<meta name="twitter:description" content="1、关于this1)第一种情况1234567891011121314151617181920212223242526&amp;lt;script&amp;gt;    import Hello from &apos;./components/Hello&apos;    export default &amp;#123;      data () &amp;#123;        return &amp;#123;          list: [&apos;a&apos;">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Miss·易" rel="home">Miss·易</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">前端与生活de拼拼凑凑</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-vue 补充" class="post-vue 补充 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      vue-补充
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://liyiyy.com/2017/06/20/vue 补充/" data-id="cj6hylb1e00075cdb2yq6nqvb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="1、关于this"><a href="#1、关于this" class="headerlink" title="1、关于this"></a>1、关于this</h3><h4 id="1-第一种情况"><a href="#1-第一种情况" class="headerlink" title="1)第一种情况"></a>1)第一种情况</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">import</span> Hello <span class="keyword">from</span> <span class="string">'./components/Hello'</span></div><div class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">      data () &#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">          <span class="attr">list</span>: [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>],</div><div class="line">          <span class="attr">idx</span>: <span class="number">0</span>,</div><div class="line">          <span class="attr">current</span>: <span class="string">''</span></div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">methods</span>: &#123;</div><div class="line">        iter () &#123;</div><div class="line">          <span class="keyword">this</span>.list.map(<span class="function"><span class="keyword">function</span> (<span class="params">v, k</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span> (k === <span class="keyword">this</span>.idx) &#123;</div><div class="line">              <span class="keyword">this</span>.current = v</div><div class="line">    </div><div class="line">              <span class="built_in">console</span>.log(<span class="keyword">this</span>.current)</div><div class="line">            &#125;</div><div class="line">          &#125;)</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">components</span>: &#123;</div><div class="line">        Hello</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在map里的this是指向当前map的迭代对象，而非我们vue的实例，this里没有我们需要的idx。解决方式有两种；<br>其一是通过保存this<br><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> <span class="number">_</span><span class="keyword">this</span> = <span class="keyword">this</span></div></pre></td></tr></table></figure></p>
+<p>其二是使用es6箭头函数<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">methods: &#123;</div><div class="line">    iter () &#123;</div><div class="line">      <span class="keyword">this</span>.list.map(<span class="function"><span class="params">(v, k)</span> =&gt;</span> &#123;</div><div class="line">        <span class="keyword">if</span> (k === <span class="keyword">this</span>.idx) &#123;</div><div class="line">          <span class="keyword">this</span>.current = v</div><div class="line"></div><div class="line">          <span class="built_in">console</span>.log(<span class="keyword">this</span>.current)</div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;,</div></pre></td></tr></table></figure></p>
+<h4 id="2-第二种情况"><a href="#2-第二种情况" class="headerlink" title="2)第二种情况"></a>2)第二种情况</h4><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> @click=<span class="string">"check"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">methods: &#123;</div><div class="line">   <span class="built_in"> check </span>() &#123;</div><div class="line">        alert('ok')</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>正确写法：<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">methods: &#123;</div><div class="line">   <span class="built_in"> check </span>() &#123;</div><div class="line">        window.alert('ok')</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="2、方法传值"><a href="#2、方法传值" class="headerlink" title="2、方法传值"></a>2、方法传值</h3><p>我们在input中的方法希望获取input的value，可以通过$event这个对象，通过将$event传入方法,我们可以成功的拿到我们希望的值<br><figure class="highlight julia"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="keyword">type</span>=<span class="string">"text"</span> value=<span class="string">"value"</span> <span class="meta">@input</span>=<span class="string">"change(<span class="variable">$event</span>)"</span>/&gt;</div></pre></td></tr></table></figure></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">change (e) &#123;</div><div class="line">  console.log(e<span class="selector-class">.target</span><span class="selector-class">.value</span>)</div><div class="line">  this<span class="selector-class">.value</span> = e<span class="selector-class">.target</span><span class="selector-class">.value</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3、迭代判断"><a href="#3、迭代判断" class="headerlink" title="3、迭代判断"></a>3、迭代判断</h3><p>比如我们有一个列表，我们希望能显示我们当前选中的那一个，基本思路是通过$index来判断是否是当前迭代对象，然后去增减class或者style来实现不同的样式<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></div><div class="line">  <span class="comment">&lt;!-- 方法1 class--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in list"</span> <span class="attr">:class</span>=<span class="string">"</span></span><span class="template-variable">&#123;'active': $index === activeId&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span></span><span class="template-variable">&#123;&#123;item&#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">  </div><div class="line">  <span class="comment">&lt;!-- 方法2 style--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in list"</span> <span class="attr">:style</span>=<span class="string">"</span></span><span class="template-variable">&#123;backgroundColor: $index === activeId ? 'red' : 'white'&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span></span><span class="template-variable">&#123;&#123;item&#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"></div><div class="line">data () <span class="template-variable">&#123;</span></div><div class="line">  return &#123;</div><div class="line">    list: ['a', 'b', 'c'],</div><div class="line">    activeId: 0</div><div class="line">  &#125;<span class="xml"></span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="4、渲染"><a href="#4、渲染" class="headerlink" title="4、渲染"></a>4、渲染</h3><p>点击菜单一个组件加载出来表格列表,输入查询条件查询,当在单击这个菜单后表格的数据没有重置查询条件和查询结果.</p>
+<p>Vue路由在页面渲染一个组件后加载后,再加载这个组件,组件不会摧毁后在重新生成这个组件,不会重新触发组件的生命周期中的方法；在开发中这个问题在两个菜单共用一个组件,设置传参来判断加载不同的数据的情况下,会出现另一个ready方法不走导致数据显示不真确.解决思路可以加监听路由地址触发ready事件.</p>
+<p>而上面的解决方法是用v-if来重新加载组件。</p>
+<h3 id="5、多页面"><a href="#5、多页面" class="headerlink" title="5、多页面"></a>5、多页面</h3><p>多页面方式一样也可以使用vue强大的组件系统和脚手架。在github.com搜索“vue2 multipage”,会得到不少多页面脚手架</p>
+<h3 id="6、elemeui"><a href="#6、elemeui" class="headerlink" title="6、elemeui"></a>6、elemeui</h3><h3 id="7、异常1"><a href="#7、异常1" class="headerlink" title="7、异常1"></a>7、异常1</h3><p>用vue做项目的时候，抛出异常:<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DOMException: Failed to execute 'insertBefore' on '<span class="keyword">Node</span><span class="title">': The</span> <span class="keyword">node</span> <span class="title">before</span> which the new <span class="keyword">node</span> <span class="title">is</span> to be inserted is not a child of this <span class="keyword">node</span>.<span class="title"></span></div></pre></td></tr></table></figure></p>
+<p>和v-if和v-show有关系；对需要渲染的模板外层添加<div v-if="isShow"><div v-for=""></div></div>,点击按钮开始请求数据的时候@click=”isShow=false”, 当成功请求数据时,在回调函数中cb(isShow=ture). 保证 更新数据的时候先移除后插入    </p>
+<h3 id="8、存储问题"><a href="#8、存储问题" class="headerlink" title="8、存储问题"></a>8、存储问题</h3><p>localstorage存储满了；</p>
+<h3 id="9、传值问题"><a href="#9、传值问题" class="headerlink" title="9、传值问题"></a>9、传值问题</h3><p>页面之间传值，父子组件之间的传值；</p>
+<h3 id="10、跨域问题"><a href="#10、跨域问题" class="headerlink" title="10、跨域问题"></a>10、跨域问题</h3><p>跨域保证数据安全</p>
+<h3 id="11、移动设备兼容问题"><a href="#11、移动设备兼容问题" class="headerlink" title="11、移动设备兼容问题"></a>11、移动设备兼容问题</h3><p>2X和3X<br>安卓机兼容问题</p>
+<h3 id="12、多页面vue搭建"><a href="#12、多页面vue搭建" class="headerlink" title="12、多页面vue搭建"></a>12、多页面vue搭建</h3><h3 id="13、seo优化"><a href="#13、seo优化" class="headerlink" title="13、seo优化"></a>13、seo优化</h3><p><a href="http://cnodejs.org/topic/5750d752491b9c4f36910fec" target="_blank" rel="external">参考</a></p>
+<p>vue2 multipage</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/20/vue 补充/">
+    <time datetime="2017-06-20T12:00:12.000Z" class="entry-date">
+        2017-06-20
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/05/06/vue搭建项目案例分析/" rel="prev"><span class="meta-nav">←</span> vue搭建项目案例分析</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/07/19/整合/" rel="next">整合 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/18/nuxt相关问题（1）/">nuxt相关问题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/20/整合2/">整合2</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/整合/">整合</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/20/vue 补充/">vue-补充</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/06/vue搭建项目案例分析/">vue搭建项目案例分析</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感想加点料/">感想加点料</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计划/">计划</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/感想加点料/" style="font-size: 10px;">感想加点料</a> <a href="/tags/计划/" style="font-size: 10px;">计划</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 LiYi
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
